@@ -78,7 +78,11 @@ int consulta(vector<produto>& estoque) {
             
             if (opcao == 0) {
                 return 1;
-            }
+            } else if (opcao != 1) {
+                printf("Opção inválida! Use 1 para Sim ou 0 para Não.\n");
+                return 1;
+                }
+
 
             printf("O que deseja atualizar?\n");
             printf("1 - Nome\n");
