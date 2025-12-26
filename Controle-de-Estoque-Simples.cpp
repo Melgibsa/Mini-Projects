@@ -103,7 +103,6 @@ int consulta(vector<produto>& estoque) {
                 
                 if (estoque[i].nome.empty()) {
                     printf("Nome inválido!\n");
-                    return -1;
                 }                
                 printf("Produto atualizado!\n");
             } 
@@ -113,7 +112,6 @@ int consulta(vector<produto>& estoque) {
                 
                 if (estoque[i].quantidade < 0) {
                     printf("Quantidade inválida!\n");
-                    return -1;
                 }
                 
                 printf("Produto atualizado!\n");
@@ -123,7 +121,7 @@ int consulta(vector<produto>& estoque) {
     }
     
     printf("Produto não encontrado!\n");
-    return -1;
+    return 1;
 }
 
 int main() {
